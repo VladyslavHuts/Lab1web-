@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Kalij's Brew</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/administrationPanel.css">
+	</head>
+	<body>
+	<div class="root">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<a href="index.html" class="header__logo">Kalij's Brew</a>
+					<nav class="menu">
+						<button class="menu__btn">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+						<ul class="menu__list menu__list-open">
+							<li class="menu__close">
+								<button class="menu__close-btn">
+									<img src="img/close.svg" alt="#">
+								</button>
+							</li>
+							<li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+							<li class="menu__item"><a href="menu.html" class="menu__link">Menu</a></li>
+							<li class="menu__item"><a href="news.html" class="menu__link ">News</a></li>
+							<li class="menu__item"><a href="contact.html" class="menu__link">Contact Us</a></li>
+							<li class="menu__item">
+								<ul class="buttons__list-burger">
+									<li class="buttons__item"><a href="signIn.html" class="button__link">Sign In</a></li>
+									<li class="buttons__item"><a href="signUp.html" class="buttons__list--active">Sing Up</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<ul class="buttons__list">
+						<li class="buttons__item"><a href="signIn.html" class="button__link">Sign In</a></li>
+						<li class="buttons__item"><a href="signIn.html" class="buttons__list--active">Sing Up</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="container">
+				<div class="administration__inner">
+					<h2 class="administration__title title">Administration Panel</h2>
+					<div class="administration__content">
+						<ul class="administration__list">
+							<li class="administration__item">
+								<button class="administration__btn" id="productsBtn">Products</button>
+							</li>
+							<li class="administration__item">
+								<button class="administration__btn" id="usersBtn">Users</button>
+							</li>
+							<li class="administration__item">
+								<button class="administration__btn" id="supportBtn">Support</button>
+							</li>
+						</ul>
+						<div class="administration__info">
+							<div class="administration__products" id="productsSection" style="display: block;">
+								<ul class="administration__products-list">
+									<li class="administration__products-item">
+										<button class="administration__products-btn" onclick="toggleContent(0)">Regular coffee</button>
+									</li>
+									<li class="administration__products-item">
+										<button class="administration__products-btn" onclick="toggleContent(1)">Coffee with milk</button>
+									</li>
+									<li class="administration__products-item">
+										<button class="administration__products-btn" onclick="toggleContent(2)">Espresso</button>
+									</li>
+									<li class="administration__products-item">
+											<button class="administration__products-btn" onclick="toggleContent(3)">Iced coffee</button>
+									</li>
+								</ul>
+								<div class="administration__product-content">
+									<div class="administration__product" id="productContent0">
+										<ul class="administration__products-cards">
+											<li class="administration__products-card">
+												<form class="product__form">
+													<div class="form__group">
+														<label for="product-image1" class="form__label">Photo:</label>
+														<input type="file" id="product-image1" class="form__input-img" accept="image/*">
+													</div>
+													<div class="form__group">
+														<label for="product-title1" class="form__label">Title:</label>
+														<input type="text" id="product-title1" class="form__input" placeholder="Product Title" required>
+													</div>
+													<div class="form__group">
+														<label for="product-discount1" class="form__label">Discount:</label>
+														<input type="text" id="product-discount1" class="form__input" placeholder="Discount Percentage">
+													</div>
+													<div class="form__group">
+														<label for="product-price1" class="form__label">Price:</label>
+														<input type="number" id="product-price1" class="form__input" placeholder="Product Price" required>
+													</div>
+													<button type="submit" class="species__btn-add">Add Product</button>
+												</form>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+										</ul>
+									</div>
+									<div class="administration__product" id="productContent1" style="display: none;">
+										<ul class="administration__products-cards">
+											<li class="administration__products-card">
+												<form class="product__form">
+													<div class="form__group">
+														<label for="product-image2" class="form__label">Photo:</label>
+														<input type="file" id="product-image2" class="form__input-img" accept="image/*">
+													</div>
+													<div class="form__group">
+														<label for="product-title2" class="form__label">Title:</label>
+														<input type="text" id="product-title2" class="form__input" placeholder="Product Title" required>
+													</div>
+													<div class="form__group">
+														<label for="product-discount2" class="form__label">Discount:</label>
+														<input type="text" id="product-discount2" class="form__input" placeholder="Discount Percentage">
+													</div>
+													<div class="form__group">
+														<label for="product-price2" class="form__label">Price:</label>
+														<input type="number" id="product-price2" class="form__input" placeholder="Product Price" required>
+													</div>
+													<button type="submit" class="species__btn-add">Add Product</button>
+												</form>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species3.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species3.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species3.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species3.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+										</ul>
+									</div>
+									<div class="administration__product" id="productContent2" style="display: none;">
+										<ul class="administration__products-cards">
+											<li class="administration__products-card">
+												<form class="product__form">
+													<div class="form__group">
+														<label for="product-image3" class="form__label">Photo:</label>
+														<input type="file" id="product-image3" class="form__input-img" accept="image/*">
+													</div>
+													<div class="form__group">
+														<label for="product-title3" class="form__label">Title:</label>
+														<input type="text" id="product-title3" class="form__input" placeholder="Product Title" required>
+													</div>
+													<div class="form__group">
+														<label for="product-discount3" class="form__label">Discount:</label>
+														<input type="text" id="product-discount3" class="form__input" placeholder="Discount Percentage">
+													</div>
+													<div class="form__group">
+														<label for="product-price3" class="form__label">Price:</label>
+														<input type="number" id="product-price3" class="form__input" placeholder="Product Price" required>
+													</div>
+													<button type="submit" class="species__btn-add">Add Product</button>
+												</form>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species2.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species2.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species2.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species2.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+										</ul>
+									</div>
+									<div class="administration__product" id="productContent3" style="display: none;">
+										<ul class="administration__products-cards">
+											<li class="administration__products-card">
+												<form class="product__form">
+													<div class="form__group">
+														<label for="product-image4" class="form__label">Photo:</label>
+														<input type="file" id="product-image4" class="form__input-img" accept="image/*">
+													</div>
+													<div class="form__group">
+														<label for="product-title4" class="form__label">Title:</label>
+														<input type="text" id="product-title4" class="form__input" placeholder="Product Title" required>
+													</div>
+													<div class="form__group">
+														<label for="product-discount4" class="form__label">Discount:</label>
+														<input type="text" id="product-discount4" class="form__input" placeholder="Discount Percentage">
+													</div>
+													<div class="form__group">
+														<label for="product-price4" class="form__label">Price:</label>
+														<input type="number" id="product-price4" class="form__input" placeholder="Product Price" required>
+													</div>
+													<button type="submit" class="species__btn-add">Add Product</button>
+												</form>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species1.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species1.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species1.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+											<li class="administration__products-card">
+												<img class="species__img" src="img/species1.png" alt="">
+												<h3 class="species__subtitle">Cappuccino</h3>
+												<p class="species__discount">Coffee 50% | Milk 50%</p>
+												<p class="species__price">$8.50</p>
+												<button class="species__btn-edit">Edit</button>
+												<button class="species__btn-delete">Delete</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div id="myModal" class="modal">
+									<div class="modal-content">
+										<span class="close">&times;</span>
+										<form class="form" id="editForm">
+											<div class="form__group">
+												<label class="form__label" for="edit-image">Photo:</label>
+												<input  type="file" id="edit-image" name="edit-image">
+											</div>
+											<div class="form__group">
+												<label class="form__label" for="edit-title">Title:</label>
+												<input class="form__input" type="text" id="edit-title" name="edit-title" placeholder="Product Title">
+											</div>
+											<div class="form__group">
+												<label class="form__label" for="edit-discount">Discount:</label>
+												<input class="form__input" type="text" id="edit-discount" name="edit-discount" placeholder="Discount Percentage">
+											</div>
+											<div class="form__group">
+												<label class="form__label" for="edit-price">Price:</label>
+												<input class="form__input" type="text" id="edit-price" name="edit-price" placeholder="Product Price">
+											</div>
+											<button class="form__btn" type="submit">Save Changes</button>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="administration__users" id="usersSection" style="display: none;">
+								<div class="administration__users-inner">
+									<div class="administration__users-info">
+										<div class="administration__users-group">
+											<h4 class="administration__users-title">Login</h4>
+											<p class="administration__users-text">superMen</p>
+										</div>
+										<div class="administration__users-group">
+											<h4 class="administration__users-title">Password</h4>
+											<p class="administration__users-text">1234</p>
+										</div>
+										<div class="administration__users-group">
+											<h4 class="administration__users-title">Email</h4>
+											<p class="administration__users-text">supermen228@gmail.com</p>
+										</div>
+										<div class="administration__users-group">
+											<h4 class="administration__users-title">Phone</h4>
+											<p class="administration__users-text">066356789</p>
+										</div>
+									</div>
+									<div class="administration__users-buttons">
+										<button class="administration__users-btn">Edit</button>
+										<button class="administration__users-btn">Delete</button>
+									</div>
+								</div>
+								<div class="administration__users-inner">
+									<div class="administration__users-info">
+										<div class="administration__users-group">
+											<h4 class="administration__users-title">Login</h4>
+											<p class="administration__users-text">superMen</p>
+										</div>
+										<div class="administration__users-group">
+											<h4 class="administration__users-title">Password</h4>
+											<p class="administration__users-text">1234</p>
+										</div>
+										<div class="administration__users-group">
+											<h4 class="administration__users-title">Email</h4>
+											<p class="administration__users-text">supermen228@gmail.com</p>
+										</div>
+										<div class="administration__users-group">
+											<h4 class="administration__users-title">Phone</h4>
+											<p class="administration__users-text">066356789</p>
+										</div>
+									</div>
+									<div class="administration__users-buttons">
+										<button class="administration__users-btn">Edit</button>
+										<button class="administration__users-btn">Delete</button>
+									</div>
+								</div>
+								<div class="administration__users-inner">
+									<div class="administration__users-info">
+										<div class="administration__users-group">
+											<h4 class="administration__users-title">Login</h4>
+											<p class="administration__users-text">superMen</p>
+										</div>
+										<div class="administration__users-group">
+											<h4 class="administration__users-title">Password</h4>
+											<p class="administration__users-text">1234</p>
+										</div>
+										<div class="administration__users-group">
+											<h4 class="administration__users-title">Email</h4>
+											<p class="administration__users-text">supermen228@gmail.com</p>
+										</div>
+										<div class="administration__users-group">
+											<h4 class="administration__users-title">Phone</h4>
+											<p class="administration__users-text">066356789</p>
+										</div>
+									</div>
+									<div class="administration__users-buttons">
+										<button class="administration__users-btn">Edit</button>
+										<button class="administration__users-btn">Delete</button>
+									</div>
+								</div>
+									<div id="myModalEdit" class="modal">
+										<div class="modal-content">
+											<span class="close1">&times;</span>
+											<form class="form" id="editFormModal">
+												<div class="form__group">
+													<label class="form__label" for="loginModal">Login:</label>
+													<input class="form__input" type="text" id="loginModal" name="loginModal" required placeholder="Login">
+												</div>
+												<div class="form__group">
+													<label class="form__label" for="passwordModal">Password:</label>
+													<input class="form__input" type="password" id="passwordModal" name="passwordModal" required placeholder="Password">
+												</div>
+												<div class="form__group">
+													<label class="form__label" for="emailModal">Email:</label>
+													<input class="form__input" type="email" id="emailModal" name="emailModal" required placeholder="Email">
+												</div>
+												<div class="form__group">
+													<label class="form__label" for="phoneModal">Phone:</label>
+													<input class="form__input" type="tel" id="phoneModal" name="phoneModal" required placeholder="Phone	">
+												</div>
+												<button class="form__btn" type="submit">Save Changes</button>
+											</form>
+										</div>
+									</div>
+							</div>
+							<div class="administration__support" id="supportSection" style="display: none;">
+								<div class="administration__support-inner">
+									<div class="administration__support-cards">
+										<div class="administration__support-card">
+											<div class="administration__support-group">
+												<h4 class="administration__support-title">Name</h4>
+												<p class="administration__support-text">Lorem.</p>
+											</div>
+											<div class="administration__support-group">
+												<h4 class="administration__support-title">Email</h4>
+												<p class="administration__support-text">Lorem ipsum.</p>
+											</div>
+											<div class="administration__support-group ">
+												<h4 class="administration__support-title">Message</h4>
+												<p class="administration__support-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae cum delectus deserunt doloremque eius esse exercitationem harum in maxime necessitatibus nisi nobis, numquam obcaecati provident quas, recusandae repudiandae sit!</p>
+											</div>
+										</div>
+										<button class="administration__support-btn">Delete</button>
+									</div>
+									<div class="administration__support-cards">
+										<div class="administration__support-card">
+											<div class="administration__support-group">
+												<h4 class="administration__support-title">Name</h4>
+												<p class="administration__support-text">Lorem.</p>
+											</div>
+											<div class="administration__support-group">
+												<h4 class="administration__support-title">Email</h4>
+												<p class="administration__support-text">Lorem ipsum.</p>
+											</div>
+											<div class="administration__support-group ">
+												<h4 class="administration__support-title">Message</h4>
+												<p class="administration__support-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae cum delectus deserunt doloremque eius esse exercitationem harum in maxime necessitatibus nisi nobis, numquam obcaecati provident quas, recusandae repudiandae sit!</p>
+											</div>
+										</div>
+										<button class="administration__support-btn">Delete</button>
+									</div>
+									<div class="administration__support-cards">
+										<div class="administration__support-card">
+											<div class="administration__support-group">
+												<h4 class="administration__support-title">Name</h4>
+												<p class="administration__support-text">Lorem.</p>
+											</div>
+											<div class="administration__support-group">
+												<h4 class="administration__support-title">Email</h4>
+												<p class="administration__support-text">Lorem ipsum.</p>
+											</div>
+											<div class="administration__support-group">
+												<h4 class="administration__support-title">Message</h4>
+												<p class="administration__support-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae cum delectus deserunt doloremque eius esse exercitationem harum in maxime necessitatibus nisi nobis, numquam obcaecati provident quas, recusandae repudiandae sit!</p>
+											</div>
+										</div>
+										<button class="administration__support-btn">Delete</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__content">
+						<h4 class="footer__title"> Kalij's Brew</h4>
+						<p class="footer__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						<ul class="icon__list">
+							<li class="icon__item">
+								<a href="#">
+									<img class="icon__img" src="img/icon.png" alt="#">
+								</a>
+							</li>
+							<li class="icon__item">
+								<a href="#">
+									<img class="icon__img" src="img/icon1.png" alt="#">
+								</a>
+							</li>
+							<li class="icon__item">
+								<a href="#">
+									<img class="icon__img" src="img/icon2.png" alt="#">
+								</a>
+							</li>
+							<li class="icon__item">
+								<a href="#">
+									<img class="icon__img" src="img/icon3.png" alt="#">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<h5 class="footer__subtitle">About</h5>
+							<ul class="footer__sublist">
+								<li class="footer__subitem">
+									<a class="footer__link" href="#">Menu</a>
+								</li>
+								<li class="footer__subitem">
+									<a class="footer__link" href="#">Features</a>
+								</li>
+								<li class="footer__subitem">
+									<a class="footer__link" href="#">News & Blogs</a>
+								</li>
+								<li class="footer__subitem">
+									<a class="footer__link" href="#">Help & Supports</a>
+								</li>
+							</ul>
+						</li>
+						<li class="footer__item">
+							<h5 class="footer__subtitle">Company</h5>
+							<ul class="footer__sublist">
+								<li class="footer__subitem">
+									<a class="footer__link" href="#">How we work</a>
+								</li>
+								<li class="footer__subitem">
+									<a class="footer__link" href="#">Terms of service</a>
+								</li>
+								<li class="footer__subitem">
+									<a class="footer__link" href="#">Pricing</a>
+								</li>
+								<li class="footer__subitem">
+									<a class="footer__link" href="#">FAQ</a>
+								</li>
+							</ul>
+						</li>
+						<li class="footer__item footer__item--last">
+							<h5 class="footer__subtitle">Contact Us</h5>
+							<ul class="footer__sublist">
+								<li class="footer__subitem">
+									<a class="footer__link" href="#">Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016</a>
+								</li>
+								<li class="footer__subitem">
+									<a class="footer__link" href="#">+1 202-918-2132</a>
+								</li>
+								<li class="footer__subitem">
+									<a class="footer__link" href="#">beanscene@mail.com</a>
+								</li>
+								<li class="footer__subitem">
+									<a class="footer__link" href="#">www.beanscene.com</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/administrationPanel.js"></script>
+	</body>
+</html>
+
+
